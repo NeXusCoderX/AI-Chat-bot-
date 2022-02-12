@@ -1,4 +1,5 @@
-
+from re import I
+from async_timeout import timeout
 import discord
 from discord.ext import commands
 import asyncio
@@ -56,6 +57,17 @@ class AIChatbot(commands.Cog):
 
         if not message.channel.id in (939722233763479604,940261893833125948):
             return
+        elif message.content.startswith("Connexa when is the drop"):
+            await message.channel.trigger_typing()
+            typingcat = await message.reply("https://tenor.com/view/cat-computer-typing-fast-gif-5368357")
+            await asyncio.sleep(1.5)
+            await typingcat.edit("Genesis Epoch is 2/19")
+
+        elif message.content.startswith("Connexa how much?"):
+            await message.channel.trigger_typing()
+            typingcat = await message.reply("https://tenor.com/view/cat-computer-typing-fast-gif-5368357")
+            await asyncio.sleep(1.5)
+            await typingcat.edit(" 35 matic presale, 45 public sale")
 
         elif message.content.startswith('Connexa'):
             await message.channel.trigger_typing()
