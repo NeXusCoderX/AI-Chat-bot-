@@ -34,5 +34,5 @@ async def on_ready():
     print("------")
 
 
-
+print("test")
 bot.run(os.getenv("TOKEN"))
