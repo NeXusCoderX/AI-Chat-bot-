@@ -1,8 +1,7 @@
-from re import I
-from async_timeout import timeout
+
 import discord
 from discord.ext import commands
-import aiohttp
+import asyncio
 
 from dotenv import load_dotenv
 import os
@@ -61,7 +60,7 @@ class AIChatbot(commands.Cog):
         elif message.content.startswith('Connexa'):
             await message.channel.trigger_typing()
             typingcat = await message.reply("https://tenor.com/view/cat-computer-typing-fast-gif-5368357")
-            await self.bot.wait_for("typingcat",timeout=5)
+            await asyncio.sleep(1.5)
             await typingcat.edit(res["AIResponse"],
                     allowed_mentions=discord.AllowedMentions(
                         users=False, roles=False, everyone=False
