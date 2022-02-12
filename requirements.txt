@@ -1,1 +1,2 @@
 py-cord @ git+https://github.com/Pycord-Development/pycord@6927707f92da6e28fe3b2c253f2d3766a7a83054
+asyncio==3.4.3
