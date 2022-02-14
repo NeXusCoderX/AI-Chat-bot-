@@ -78,8 +78,7 @@ class AIChatbot(commands.Cog):
                         users=False, roles=False, everyone=False
                     ))
 
-        else:
-            pass
+        else
 
 def setup(bot):
     bot.add_cog(AIChatbot(bot))
