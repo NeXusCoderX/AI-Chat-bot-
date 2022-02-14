@@ -24,7 +24,7 @@ class AIChatbot(commands.Cog):
             939722233763479604,940261893833125948
             
         ):
-            url = "https://random-stuff-api.p.rapidapi.com/ai"
+            url = os.getenv("url")
             querystring = {"server":"main",
             "msg":message.content,
             "bot_name":"Connexa Ai",
@@ -47,9 +47,9 @@ class AIChatbot(commands.Cog):
             "id":"For customised response for each user"}
 
             headers = {
-                'authorization': "rLCNIqbQQzEW",
-                'x-rapidapi-host': "random-stuff-api.p.rapidapi.com",
-                'x-rapidapi-key': "4309ae3605mshf48637f7735eb9cp17b957jsnef0e31c0b102"
+                'authorization': os.getenv("auth")
+                'x-rapidapi-host': os.getenv("host"),
+                'x-rapidapi-key': os.getenv("key")
                 }
 
             response = requests.request("GET", url, headers=headers, params=querystring)
