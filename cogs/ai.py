@@ -79,7 +79,7 @@ class AIChatbot(commands.Cog):
                     ))
 
         else:
-            await message.reply("Say ``Connexa`` at the beggning of your message to talk to me :)")
+            pass
 
 def setup(bot):
     bot.add_cog(AIChatbot(bot))
