@@ -28,7 +28,7 @@ class AIChatbot(commands.Cog):
             querystring = {"server":"main",
             "msg":message.content,
             "bot_name":"Connexa Ai",
-            "bot_gender":"male",
+            "bot_gender":"male", of
             "bot_master":"The_Crush_Kid#0161",
             "bot_age":"39",
             "bot_company":"Weird Medicology",
@@ -78,7 +78,7 @@ class AIChatbot(commands.Cog):
                         users=False, roles=False, everyone=False
                     ))
 
-        else
+       
 
 def setup(bot):
     bot.add_cog(AIChatbot(bot))
