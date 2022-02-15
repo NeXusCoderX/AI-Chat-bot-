@@ -21,14 +21,15 @@ class AIChatbot(commands.Cog):
         if self.bot.user == message.author:
             return
         if message.channel.id in (
-            939722233763479604,940261893833125948
+            939722233763479604,940261893833125948,942930685927260201,942930720861618247
             
         ):
-            url = os.getenv("url")
+            url = (os.getenv("url"))
+
             querystring = {"server":"main",
             "msg":message.content,
             "bot_name":"Connexa Ai",
-            "bot_gender":"male", of
+            "bot_gender":"male",
             "bot_master":"The_Crush_Kid#0161",
             "bot_age":"39",
             "bot_company":"Weird Medicology",
@@ -47,15 +48,14 @@ class AIChatbot(commands.Cog):
             "id":"For customised response for each user"}
 
             headers = {
-                'authorization': os.getenv("auth")
-                'x-rapidapi-host': os.getenv("host"),
-                'x-rapidapi-key': os.getenv("key")
+                'authorization': (os.getenv("auth")),
+                'x-rapidapi-host': (os.getenv("host")),
+                'x-rapidapi-key': (os.getenv("key"))
                 }
 
             response = requests.request("GET", url, headers=headers, params=querystring)
             res = response.json()
-
-        if not message.channel.id in (939722233763479604,940261893833125948):
+        if not message.channel.id in (939722233763479604,940261893833125948,942930685927260201):
             return
         elif message.content.startswith("Connexa when is the drop"):
             await message.channel.trigger_typing()
@@ -78,7 +78,6 @@ class AIChatbot(commands.Cog):
                         users=False, roles=False, everyone=False
                     ))
 
-       
 
 def setup(bot):
     bot.add_cog(AIChatbot(bot))
