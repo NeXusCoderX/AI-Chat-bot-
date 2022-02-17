@@ -70,7 +70,7 @@ class AIChatbot2(commands.Cog):
             await asyncio.sleep(1.5)
             await typingcat.edit(" 35 matic presale, 45 public sale")
 
-        elif message.content.startswith('Connexa'):
+        else:
             await message.channel.trigger_typing()
             typingcat = await message.reply("https://tenor.com/view/cat-computer-typing-fast-gif-5368357")
             await asyncio.sleep(1.5)
@@ -78,7 +78,6 @@ class AIChatbot2(commands.Cog):
                     allowed_mentions=discord.AllowedMentions(
                         users=False, roles=False, everyone=False
                     ))
-        else:
-            await message.reply("Say ``Connexa`` at the begning of ur msg to get replyed ;)")
+
 def setup(bot):
     bot.add_cog(AIChatbot2(bot))
