@@ -21,7 +21,7 @@ class AIChatbot(commands.Cog):
         if self.bot.user == message.author:
             return
         if message.channel.id in (
-            939722233763479604,940261893833125948,942930685927260201,942930720861618247,944069769764679730
+            876522080370323476,942930685927260201
             
             
         ):
