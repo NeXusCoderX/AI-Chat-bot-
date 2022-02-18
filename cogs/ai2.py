@@ -21,7 +21,7 @@ class AIChatbot2(commands.Cog):
         if self.bot.user == message.author:
             return
         if message.channel.id in (
-            939722233763479604,942930720861618247,876522080370323476
+            944069769764679730,942930720861618247
             
         ):
             url = (os.getenv("url"))
