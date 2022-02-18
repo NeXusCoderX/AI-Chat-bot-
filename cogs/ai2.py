@@ -56,7 +56,7 @@ class AIChatbot2(commands.Cog):
             response = requests.request("GET", url, headers=headers, params=querystring)
             res = response.json()
 
-        if not message.channel.id in (942930720861618247,942930720861618247):
+        if not message.channel.id in (944069769764679730,942930720861618247):
             return
         elif message.content.startswith("Connexa when is the drop"):
             await message.channel.trigger_typing()
