@@ -73,6 +73,7 @@ class AIChatbot(commands.Cog):
             await message.channel.trigger_typing()
             typingcat = await message.reply("https://tenor.com/view/cat-computer-typing-fast-gif-5368357")
             await asyncio.sleep(1.5)
+            print(res.status_code)
             await typingcat.edit(res["AIResponse"],
                     allowed_mentions=discord.AllowedMentions(
                         users=False, roles=False, everyone=False
