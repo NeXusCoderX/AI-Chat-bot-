@@ -21,8 +21,7 @@ class AIChatbot(commands.Cog):
         if self.bot.user == message.author:
             return
         if message.channel.id in (
-            876522080370323476,942930685927260201
-            
+            939722233763479604,940261893833125948,942930685927260201,942930720861618247
             
         ):
             url = (os.getenv("url"))
@@ -56,9 +55,9 @@ class AIChatbot(commands.Cog):
 
             response = requests.request("GET", url, headers=headers, params=querystring)
             res = response.json()
-        if not message.channel.id in (876522080370323476,942930685927260201):
+        if not message.channel.id in (939722233763479604,940261893833125948,942930685927260201):
             return
-        elif message.content.startswith("Connexa when is the drop"):
+        elif message.content.startswith("Connexa when is the drop" or "Connexa when is the mint"):
             await message.channel.trigger_typing()
             typingcat = await message.reply("https://tenor.com/view/cat-computer-typing-fast-gif-5368357")
             await asyncio.sleep(1.5)
