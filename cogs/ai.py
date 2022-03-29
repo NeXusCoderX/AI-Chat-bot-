@@ -77,6 +77,7 @@ class AIChatbot(commands.Cog):
                     allowed_mentions=discord.AllowedMentions(
                         users=False, roles=False, everyone=False
                     ))
+            print(res.status_code)
 
 
 def setup(bot):
